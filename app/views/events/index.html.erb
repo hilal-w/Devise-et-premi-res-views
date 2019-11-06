@@ -1,0 +1,134 @@
+<% one = @events.length / 3%>
+<% two = @events.length % 3%>
+<% index = 0 %>
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Cree un evenement</h1>
+      <p class="lead text-muted">Pour cree un evenent vous pouvez cliquer sur le lien ci-dessous</p>
+      <p>
+        <a href="<%=new_event_path%>" class="btn btn-primary my-2">Go</a>
+      </p>
+    </div>
+  </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <% one.times do |i| %>
+
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="card-body">
+              <h2>Titre : <%=@events[index].title%></h2>
+              <ul>
+                <li>Debut : <%=@events[index].start_date%></li>
+                <li>Durée : <%=@events[index].duration%> mn</li>
+                <li>Prix : <%=@events[index].price%> €</li>
+                <li>Lieu : <%=@events[index].location%></li>
+                <li>Crée par : <%=@events[index].admin.first_name%> <%=@events[index].admin.last_name%></li>
+              </ul>
+              <p class="card-text">Description : <%=@events[index].description%></p>
+              <a href="<%=event_path(@events[index].id)%>"><button type="button" class="btn btn-sm btn-outline-primary">View</button></a>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <hr class="my-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-body">
+                  <small class="text-muted">Crée le : <%=@events[index].created_at%></small><br/>
+                  <small class="text-muted">Dernier mise à jour : <%=@events[index].updated_at%></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%index+=1%>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="card-body">
+              <h2>Titre : <%=@events[index].title%></h2>
+              <ul>
+                <li>Debut : <%=@events[index].start_date%></li>
+                <li>Durée : <%=@events[index].duration%> mn</li>
+                <li>Prix : <%=@events[index].price%> €</li>
+                <li>Lieu : <%=@events[index].location%></li>
+                <li>Crée par : <%=@events[index].admin.first_name%> <%=@events[index].admin.last_name%></li>
+              </ul>
+              <p class="card-text">Description : <%=@events[index].description%></p>
+              <a href="<%=event_path(@events[index].id)%>"><button type="button" class="btn btn-sm btn-outline-primary">View</button></a>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <hr class="my-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-body">
+                  <small class="text-muted">Crée le : <%=@events[index].created_at%></small><br/>
+                  <small class="text-muted">Dernier mise à jour : <%=@events[index].updated_at%></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%index+=1%>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="card-body">
+              <h2>Titre : <%=@events[index].title%></h2>
+              <ul>
+                <li>Debut : <%=@events[index].start_date%></li>
+                <li>Durée : <%=@events[index].duration%> mn</li>
+                <li>Prix : <%=@events[index].price%> €</li>
+                <li>Lieu : <%=@events[index].location%></li>
+                <li>Crée par : <%=@events[index].admin.first_name%> <%=@events[index].admin.last_name%></li>
+              </ul>
+              <p class="card-text">Description : <%=@events[index].description%></p>
+              <a href="<%=event_path(@events[index].id)%>"><button type="button" class="btn btn-sm btn-outline-primary">View</button></a>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <hr class="my-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-body">
+                  <small class="text-muted">Crée le : <%=@events[index].created_at%></small><br/>
+                  <small class="text-muted">Dernier mise à jour : <%=@events[index].updated_at%></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%index+=1%>
+        <%end%>
+        <%two.times do |i|%>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="card-body">
+              <h2><%=@events[index].title%></h2>
+              <ul>
+                <li>Debut : <%=@events[index].start_date%></li>
+                <li>Durée : <%=@events[index].duration%> mn</li>
+                <li>Prix : <%=@events[index].price%> €</li>
+                <li>Lieu : <%=@events[index].location%></li>
+                <li>Crée par : <%=@events[index].admin.first_name%> <%=@events[index].admin.last_name%></li>
+              </ul>
+              <p class="card-text">Description : <%=@events[index].description%></p>
+              <a href="<%=event_path(@events[index].id)%>"><button type="button" class="btn btn-sm btn-outline-primary">View</button></a>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <hr class="my-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card" style="width: 18rem;">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><small>Crée le : <%=@events[index].created_at%></small></li>
+                    <li class="list-group-item"><small>Dernier mise à jour : <%=@events[index].updated_at%></small></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <%index+=1%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>

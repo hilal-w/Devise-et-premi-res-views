@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bonjours <%=@participed.event.admin.first_name%> <%=@participed.event.admin.last_name%>!</h1>
+    <p>
+      <%=@participed.participant.first_name%> <%=@participed.participant.last_name%> a participer a votre evenement "<%=@participed.event.title%>".
+    </p>
+    <p>
+      Pour accéder à ton espace event, connecte-toi via : <%= @url %>.
+    </p>
+    <p> À très vite sur monsite.fr !
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<h1><%=@user.first_name%> <%=@user.last_name%></h1>
+<p>Name : <%=@user.first_name%> <%=@user.last_name%></p>
+<p>Email : <%=@user.email%></p>
+<p>Description : <br><%=@user.description%></p>
+<a href = "<%=edit_user_registration_path%>">Editer mon profil</a>
+
+<% if current_user.id == @user.id %>
+  <div class="jumbotron">
+    <center>
+      <h1 class="display-4"></h1>
+    </center>
+    <hr class="my-4">
+    <p class="lead">gsdfgsd</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div>
+<% end %>
